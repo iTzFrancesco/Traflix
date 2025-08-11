@@ -79,7 +79,7 @@ footer {
 #logo_container {
     display: flex;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 20px;
 }
 
 .logo-wrapper {
@@ -100,26 +100,13 @@ footer {
     gap: 150px;
 }
 
-#logo_ds {
+#logo_ds, #logo_tg {
     width: 60px;
     transition: transform 0.2s ease-in-out; 
 }
 
-#logo_tg {
-    width: 60px;
-    transition: transform 0.2s ease-in-out;
-}
 
-
-#logo_ds:hover {
-    transform: scale(1.5);
-}
-
-#logo_tg:hover {
-    transform: scale(1.5);
-}
-
-.loghi:hover {
+.loghi:hover, #logo_ds:hover, #logo_tg:hover {
     transform: scale(1.5);
 }
 
