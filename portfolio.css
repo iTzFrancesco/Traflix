@@ -258,12 +258,13 @@ footer {
   border-radius: 50%;
   background: var(--accent);
   margin-top: -5px;
-  cursor: pointer;
+  cursor: none !important;
 }
 #volumeSlider::-webkit-slider-runnable-track {
   height: 4px;
   background: var(--muted);
   border-radius: 5px;
+  cursor: none !important;
 }
 
 /* Firefox */
@@ -273,12 +274,13 @@ footer {
   border-radius: 50%;
   background: var(--accent);
   border: none;
-  cursor: pointer;
+  cursor: none !important;
 }
 #volumeSlider::-moz-range-track {
   height: 4px;
   background: var(--muted);
   border-radius: 5px;
+  cursor: none !important;
 }
 
 
@@ -290,10 +292,20 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  width: 32px;      /* dimensione cursore */
+  width: 32px;
   height: 32px;
   pointer-events: none;
   background: url('https://i.ibb.co/sd9S9Nc1/navigation.png') no-repeat center center;
   background-size: contain;
-  z-index: 9999999999999;
+  z-index: 9999999999;
+  transition: transform 0.05s ease-out;
+}
+
+
+a,button,input,textarea {
+  cursor: none !important;
+}
+
+input[type="range"] {
+  cursor: none !important;
 }
