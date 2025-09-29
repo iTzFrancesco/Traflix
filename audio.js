@@ -32,3 +32,6 @@ toggleBtn.addEventListener("click", () => {
 volumeSlider.addEventListener("input", () => {
   audio.volume = parseFloat(volumeSlider.value);
 });
+
+
+

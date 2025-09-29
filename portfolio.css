@@ -9,6 +9,7 @@
 
 /* Overlay splash iniziale */
 #splash {
+  cursor: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -280,3 +281,19 @@ footer {
   border-radius: 5px;
 }
 
+
+* {
+  cursor: none !important; /* nasconde cursore standard */
+}
+
+.box.arrow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;      /* dimensione cursore */
+  height: 32px;
+  pointer-events: none;
+  background: url('https://i.ibb.co/sd9S9Nc1/navigation.png') no-repeat center center;
+  background-size: contain;
+  z-index: 9999999999999;
+}
