@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
@@ -9,74 +9,88 @@
   <link rel="icon" href="https://i.ibb.co/mC0mw1LP/favicon.png">
 </head>
 <body>
-  <nav class="nav">
-    <div class="brand">
-      <div class="logo"><img src="https://i.ibb.co/mC0mw1LP/favicon.png" alt="logo_traflix" class="logo_traflix"></div>
-      <div>
-        <h1 style="margin:0">Francesco</h1>
-        <div style="color:var(--muted);font-size:13px">Personal Portfolio</div>
+
+  <!-- Splash iniziale -->
+  <div id="splash">
+    <div id="splashText">click to enter...</div>
+  </div>
+
+  <!-- Contenuto principale -->
+  <div id="mainContent">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">
+          <img src="https://i.ibb.co/mC0mw1LP/favicon.png" alt="logo_traflix" class="logo_traflix">
+        </div>
+        <div>
+          <h1 style="margin:0">Francesco</h1>
+          <div style="color:var(--muted);font-size:13px">Personal Portfolio</div>
+        </div>
       </div>
-    </div>
-  </nav>
-  <main>
-    <section class="hero">
 
-      <h1>Who i am?</h1>
-      <h2>Hi, I'm Francesco, a 16-year-old from Italy and the creator of this website. I started programming in 2024, and I'm currently working on various projects, including Minecraft development and personal work.</h2>
+      <!-- Controllo audio -->
+      <div id="audioContainer">
+        <audio id="bgMusic" loop>
+          <source src="/files/song.mp3" type="audio/mpeg">
+          Il tuo browser non supporta l'audio.
+        </audio>
 
-      <h1>My Skills</h1>
-      <h2>I've worked on web and software development, and I know various programming languages — the main ones I use are...</h2>
+        <button id="toggleBtn" class="paused">
+          <span id="icon"></span>
+        </button>
 
-      <div id="logo_container">
-        
-        <div class="logo-wrapper">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" id="logo_py" class="loghi" >
-          <span>Python</span>
-        </div>
-
-        <div class="logo-wrapper">
-          <img src="https://i.ibb.co/tTdQwDzb/19712ec2f1982c5f75a26a19feaf1123.png" alt="js" id="logo_js" class="loghi">
-          <span>JavaScript</span>
-        </div>
-
-        <div class="logo-wrapper">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" id="logo_html" class="loghi">
-          <span>HTML</span>
-        </div>
-        
-        <div class="logo-wrapper">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css" id="logo_css" class="loghi">
-          <span>CSS</span>
-        </div>
-
-        <div class="logo-wrapper">
-          <img src="https://i.ibb.co/7JZBcRLj/image.png" alt="git" id="logo_git" class="loghi">
-          <span>Git</span>
-        </div>
-
+        <input type="range" id="volumeSlider" min="0" max="0.3" step="0.01" value="0.5">
       </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <h1>Who I am?</h1>
+        <h2>Hi, I'm Francesco, a 16-year-old from Italy and the creator of this website. I started programming in 2024, and I'm currently working on various projects, including Minecraft development and personal work.</h2>
+
+        <h1>My Skills</h1>
+        <h2>I've worked on web and software development, and I know various programming languages — the main ones I use are...</h2>
+
+        <div id="logo_container">
+          <div class="logo-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" class="loghi">
+            <span>Python</span>
+          </div>
+          <div class="logo-wrapper">
+            <img src="https://i.ibb.co/tTdQwDzb/19712ec2f1982c5f75a26a19feaf1123.png" alt="js" class="loghi">
+            <span>JavaScript</span>
+          </div>
+          <div class="logo-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" class="loghi">
+            <span>HTML</span>
+          </div>
+          <div class="logo-wrapper">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css" class="loghi">
+            <span>CSS</span>
+          </div>
+          <div class="logo-wrapper">
+            <img src="https://i.ibb.co/7JZBcRLj/image.png" alt="git" class="loghi">
+            <span>Git</span>
+          </div>
+        </div>
 
         <h1>Contact</h1>
         <div class="contact_container">
-          <a href="https://discord.com/users/811969190742327326" class="contact-link" target="_blank">
+          <a href="https://discord.com/users/811969190742327326" target="_blank">
             <img src="https://i.ibb.co/TxWNt0q0/image.png" alt="Discord" id="logo_ds">
           </a>
-
-          <a href="https://t.me/itzfrancesco7" class="contact-link" target="_blank">
+          <a href="https://t.me/itzfrancesco7" target="_blank">
             <img src="https://i.ibb.co/39stQT6f/image.png" alt="Telegram" id="logo_tg">
           </a>
-
         </div>
-        
-  
-          
       </section>
-  </main>
-  <footer>
-    <div class="footer">© 2025 - Francesco - All rights reserved.</div>
-   
-      
-    </div>
-  </footer>
+    </main>
+
+    <footer>
+      <div class="footer">© 2025 - Francesco - All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script src="audio.js"></script>
 </body>
 </html>
