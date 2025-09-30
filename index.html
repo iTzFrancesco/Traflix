@@ -30,19 +30,25 @@
         </div>
       </div>
 
-      <!-- Controllo audio -->
-      <div id="audioContainer">
-        <audio id="bgMusic" loop>
-          <source src="/files/song.mp3" type="audio/mpeg">
-          Il tuo browser non supporta l'audio.
-        </audio>
+        
 
-        <button id="toggleBtn" class="paused">
-          <span id="icon"></span>
-        </button>
+        <div id="playlist">
+          <div id="audioContainer">
+            <audio id="bgMusic">
+              Il tuo browser non supporta l'audio.
+            </audio>
 
-        <input type="range" id="volumeSlider" min="0" max="0.3" step="0.01" value="0.5">
-      </div>
+            <!-- Bottone play/stop con icona -->
+            <button id="toggleBtn" class="paused">
+              <span id="icon">🔇</span>
+            </button>
+
+            <!-- Slider volume -->
+            <input type="range" id="volumeSlider" min="0" max="0.3" step="0.01" value="0.5">
+          </div>
+        </div>
+
+
     </nav>
 
     <main>

@@ -4,15 +4,32 @@ const icon = document.getElementById("icon");
 const volumeSlider = document.getElementById("volumeSlider");
 const splash = document.getElementById("splash");
 
+// 🎵 Elenco canzoni in loop
+const songs = ["/files/song1.mp3", "/files/song2.mp3"];
+let currentSong = 0;
+
 // Volume iniziale
 audio.volume = parseFloat(volumeSlider.value);
 
-// Splash click → avvia audio
-splash.addEventListener("click", () => {
+// Carica e avvia una canzone
+function loadSong(index) {
+  currentSong = index;
+  audio.src = songs[currentSong];
   audio.play();
-  splash.classList.add("fade-out");
   toggleBtn.classList.remove("paused");
-  icon.textContent = "🔊"; // cambia in stop
+  icon.textContent = "🔊";
+}
+
+// Quando una canzone finisce → passa alla prossima
+audio.addEventListener("ended", () => {
+  currentSong = (currentSong + 1) % songs.length;
+  loadSong(currentSong);
+});
+
+// Splash click → avvia playlist dalla prima canzone
+splash.addEventListener("click", () => {
+  loadSong(0);
+  splash.classList.add("fade-out"); // nasconde lo splash
 });
 
 // Play / Stop
@@ -32,6 +49,3 @@ toggleBtn.addEventListener("click", () => {
 volumeSlider.addEventListener("input", () => {
   audio.volume = parseFloat(volumeSlider.value);
 });
-
-
-
